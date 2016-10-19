@@ -7,7 +7,7 @@ namespace GrocerEWebApplication.Models
 {
     public class Item
     {
-        //Properties for the items zzzzzzz
+        //Properties for the items
         private String _productName;
         private int _productID;
         private int _productPrice;
