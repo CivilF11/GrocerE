@@ -13,9 +13,21 @@ namespace GrocerEWebApplication.Controllers
         {
             return View();
         }
-
-
-
-       
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Inventory()
+        {
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
+        public ActionResult ShoppingCart()
+        {
+            return View();
+        }
     }
 }
