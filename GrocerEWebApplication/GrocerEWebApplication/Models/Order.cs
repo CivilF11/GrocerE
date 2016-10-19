@@ -47,6 +47,27 @@ namespace GrocerEWebApplication.Models
 
 
 
+        private Double SubTotal
+        {
+            get
+            {
+                //return item price * amount;
+                return 0;
+            }
+        }
+
+
+        private Double SubTotalTax
+        {
+            //add 0.13 as constant
+            get
+            {
+                return (SubTotal * 0.13);
+            }
+        }
+
+
+
         public Order(Item item, int amount)
         {
             _item = item;
@@ -54,6 +75,9 @@ namespace GrocerEWebApplication.Models
             _amount = amount;
         }
 
+
+
+       
 
 
 

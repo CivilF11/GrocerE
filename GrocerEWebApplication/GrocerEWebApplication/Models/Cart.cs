@@ -12,8 +12,6 @@ namespace GrocerEWebApplication.Models
 
         private List<Order> _contents;
 
-        private Double _subTotal;
-
 
 
         public List<Order> Contents
@@ -31,14 +29,6 @@ namespace GrocerEWebApplication.Models
 
 
 
-        public Double SubTotal
-        {
-            get
-            {
-                //todo implement
-                return _subTotal;
-            }
-        }
 
 
 
