@@ -7,5 +7,8 @@ namespace GrocerEWebApplication.Models
 {
     public class Item
     {
+
+
+
     }
 }
