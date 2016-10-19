@@ -7,6 +7,9 @@ namespace GrocerEWebApplication.Models
 {
     public class Cart
     {
+
+
+
         private List<Order> _contents;
 
         private Double _subTotal;
@@ -36,7 +39,6 @@ namespace GrocerEWebApplication.Models
                 return _subTotal;
             }
         }
-
 
 
 
