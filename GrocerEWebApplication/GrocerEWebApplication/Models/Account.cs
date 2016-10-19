@@ -17,6 +17,8 @@ namespace GrocerEWebApplication.Models
 
         private String _shippingAddress;
 
+        private List<Transaction> _transactionHistory;
+
 
 
         public String Username
@@ -86,11 +88,20 @@ namespace GrocerEWebApplication.Models
             }
         }
         
-        /*
-         * Other properties needed:
-         * 
-         * Order history
-         */
+        
+
+        public List<Transaction> TransactionHistory
+        {
+            get
+            {
+                return _transactionHistory;
+            }
+
+            set
+            {
+                _transactionHistory = value;
+            }
+        }
 
 
         public Account(String username, String password, String name)
