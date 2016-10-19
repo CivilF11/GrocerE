@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace GrocerEWebApplication.Controllers
 {
-    public class ProductBrowserController : Controller
+    public class HomeController : Controller
     {
-        // GET: ProductBrowser
+        // GET: Home
         public ActionResult Index()
         {
             return View();
