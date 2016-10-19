@@ -48,7 +48,6 @@ namespace GrocerEWebApplication.Models
 
 
 
-
         public void AddStock(int amount)
         {
             _quantity += amount;
@@ -61,9 +60,6 @@ namespace GrocerEWebApplication.Models
             _quantity -= amount;
         }
             
-
-
-
 
 
     }
