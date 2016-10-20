@@ -1,4 +1,7 @@
-﻿@{
+﻿@using GrocerEWebApplication.Models
+@model IEnumerable<Stock>
+
+@{
     Layout = null;
 }
 
@@ -20,9 +23,21 @@
             <li><a href="~/Views/Home/ShoppingCart.cshtml">Shopping Cart</a></li>
         </ul>
         <h1>Browse all Products</h1>
-        <form>
-            LIST OF ITEMS GOES HERE
-        </form>
+        <div>
+
+            <ul>
+                @foreach (Stock stockItem in Model)
+                {
+                    <li class="inventoryItem">
+                        <h2>Name: @stockItem.Item.Name</h2>
+                        <p>ID: @stockItem.Item.ID</p>
+                        <p>Price: @stockItem.Item.Price.ToString("c")</p>
+                        <p>In Stock: @stockItem.Quantity</p>
+                    </li>
+                }
+            </ul>
+
+        </div>
     </div>
 </body>
 </html>

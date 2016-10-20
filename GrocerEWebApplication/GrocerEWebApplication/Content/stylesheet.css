@@ -1,7 +1,6 @@
 ﻿ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    padding: 5%;
     overflow: hidden;
     background-color: #3e5e33;
 }
@@ -9,6 +8,14 @@
 li {
     float: left;
     align-content:center;
+}
+
+li.inventoryItem
+{
+    margin: 2%;
+    padding: 1%;
+    background-color: #2d4d22;
+    border-radius: 2em;
 }
 
 li a {
@@ -19,7 +26,7 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
     background-color: #111;
 }
