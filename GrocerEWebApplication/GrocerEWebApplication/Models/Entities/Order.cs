@@ -15,7 +15,7 @@ namespace GrocerEWebApplication.Models
 
 
 
-        public Item OrderList
+        public Item Item
         {
             get
             {
@@ -51,8 +51,7 @@ namespace GrocerEWebApplication.Models
         {
             get
             {
-                //return item price * amount;
-                return 0;
+                return Item.Price * Amount;
             }
         }
 

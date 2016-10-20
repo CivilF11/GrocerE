@@ -14,13 +14,34 @@ namespace GrocerEWebApplication.Models.Persistence
                 return new List<Stock>
                 {
                     new Stock
-                    {
+                    (
                         new Item
-                        {
+                        (
+                            0,
+                            "Apples",
+                            2
+                        )
 
-                        }
-                    }
-                }
+                    ),
+                    new Stock
+                    (
+                        new Item
+                        (
+                            1,
+                            "Oranges",
+                            3
+                        )
+                    ),
+                    new Stock
+                    (
+                        new Item
+                        (
+                            2,
+                            "Potatos",
+                            5
+                        )
+                    )
+                };
             }
         }
     }
