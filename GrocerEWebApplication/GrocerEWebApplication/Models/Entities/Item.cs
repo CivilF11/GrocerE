@@ -38,11 +38,6 @@ namespace GrocerEWebApplication.Models
             {
                 return _id;
             }
-
-            set
-            {
-                _id = value;
-            }
         }
 
 
@@ -57,6 +52,17 @@ namespace GrocerEWebApplication.Models
             {
                 _price = value;
             }
+        }
+
+
+
+        public Item(int id, String name, Double price)
+        {
+            _id = id;
+
+            _name = name;
+
+            _price = price;
         }
 
     }
