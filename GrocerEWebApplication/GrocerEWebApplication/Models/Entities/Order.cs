@@ -47,7 +47,7 @@ namespace GrocerEWebApplication.Models
 
 
 
-        private Double SubTotal
+        public Double SubTotal
         {
             get
             {
@@ -56,7 +56,7 @@ namespace GrocerEWebApplication.Models
         }
 
 
-        private Double SubTotalTax
+        public Double SubTotalTax
         {
             //add 0.13 as constant
             get

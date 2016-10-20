@@ -29,5 +29,20 @@ namespace GrocerEWebApplication.Models.Entities
         {
             _inventory = new TestStockRepository().ItemStore;
         }
+
+
+
+        public Item GetItemByID(int id)
+        {
+            foreach (Stock stockItem in _inventory)
+            {
+                if (stockItem.Item.ID == id)
+                {
+                    return stockItem.Item;
+                }
+            }
+
+            return null;
+        }
     }
 }

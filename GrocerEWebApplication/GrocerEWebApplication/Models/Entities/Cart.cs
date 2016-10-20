@@ -34,9 +34,7 @@ namespace GrocerEWebApplication.Models
 
         public Cart()
         {
-
             Contents = new List<Order>();
-
         }
         
     }

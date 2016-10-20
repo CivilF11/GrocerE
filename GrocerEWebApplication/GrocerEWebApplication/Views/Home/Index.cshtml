@@ -21,20 +21,30 @@
             <li><a href="~/Views/Home/Inventory.cshtml">Inventory</a></li>
             <li><a href="~/Views/Home/Login.cshtml">Login</a></li>
             <li><a href="~/Views/Home/ShoppingCart.cshtml">Shopping Cart</a></li>
+            <li>@Html.ActionLink("Cart", "ShoppingCart")</li>
         </ul>
+    </div>
+    <div>
         <h1>Browse all Products</h1>
         <div>
 
             <ul>
-                @foreach (Stock stockItem in Model)
-                {
+@using (Html.BeginForm("AddToCart", "Home"))
+{
+    foreach (Stock stockItem in Model)
+    {
                     <li class="inventoryItem">
-                        <h2>Name: @stockItem.Item.Name</h2>
-                        <p>ID: @stockItem.Item.ID</p>
-                        <p>Price: @stockItem.Item.Price.ToString("c")</p>
-                        <p>In Stock: @stockItem.Quantity</p>
+                        
+                            <h2>Name: @stockItem.Item.Name</h2>
+                            <p>ID: @stockItem.Item.ID</p>
+                            <p>Price: @stockItem.Item.Price.ToString("c")</p>
+                            <p>In Stock: @stockItem.Quantity</p>
+
+                            <input type="submit" value="Add To Cart" name="@stockItem.Item.ID.ToString()" id="@stockItem.Item.ID.ToString()" />
+                        
                     </li>
-                }
+    }
+}
             </ul>
 
         </div>

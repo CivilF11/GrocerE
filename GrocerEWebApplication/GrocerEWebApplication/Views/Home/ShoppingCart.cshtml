@@ -1,4 +1,7 @@
-﻿@{
+﻿@using GrocerEWebApplication.Models
+@model IEnumerable<Order>
+
+@{
     Layout = null;
 }
 
@@ -20,5 +23,28 @@
             <li>@Html.ActionLink("Shopping Cart", "ShoppingCart")</li>
         </ul>
     </div>
+
+
+    <div>
+
+        <div>
+
+            <ul>
+                @foreach (Order order in Model)
+                {
+                    <li>
+                        <h4>@order.Item.ID &nbsp&nbsp&nbsp&nbsp @order.Item.Name</h4>
+                        &nbsp&nbsp&nbsp&nbspPrice: @order.Item.Price.ToString("c") x @order.Amount
+                        &nbsp&nbsp&nbsp&nbspItem Subtotal: @order.SubTotal + @order.SubTotalTax taxable
+                    </li>
+                }
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
 </body>
 </html>
