@@ -7,5 +7,57 @@ namespace GrocerEWebApplication.Models
 {
     public class Item
     {
+
+        private String _name;
+
+        private int _id;
+
+        private Double _price;
+
+
+
+        public String Name
+        {
+            get
+            {
+                return _name;
+            }
+
+
+            set
+            {
+                _name = value;
+            }
+        }
+
+
+
+        public int ID
+        {
+            get
+            {
+                return _id;
+            }
+
+            set
+            {
+                _id = value;
+            }
+        }
+
+
+        public Double Price
+        {
+            get
+            {
+                return _price;
+            }
+
+            set
+            {
+                _price = value;
+            }
+        }
+
     }
 }
