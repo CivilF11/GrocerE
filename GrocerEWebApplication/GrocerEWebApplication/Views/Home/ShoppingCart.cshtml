@@ -33,7 +33,7 @@
                 @foreach (KeyValuePair<String, Order> order in Model.Contents)
                 {
                     <li class="shoppingCart">
-                        <h4>@order.Value.Item.ID &nbsp&nbsp&nbsp&nbsp @order.Value.Item.Name</h4>
+                        <h4>@order.Value.Item.ID @order.Value.Item.Name</h4>
                         <p>Price: @order.Value.Item.Price.ToString("c") x @order.Value.Amount</p>
                         <p>Item Subtotal: @order.Value.SubTotal.ToString("c") + @order.Value.SubTotalTax.ToString("c") taxable</p>
                     </li>
