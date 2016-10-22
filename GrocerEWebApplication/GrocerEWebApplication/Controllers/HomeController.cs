@@ -66,9 +66,24 @@ namespace GrocerEWebApplication.Controllers
                     _shoppingCart = new Cart();
                 }
 
+
                 Order order = new Order(item, 1);
 
-                _shoppingCart.Contents.Add(order);
+                if (_shoppingCart.Contents.Keys.Contains(order.Item.Name))
+                {
+                    Order oldOrder = _shoppingCart.Contents[order.Item.Name];
+
+                    oldOrder.Amount += order.Amount;
+
+                    _shoppingCart.Contents[order.Item.Name] = oldOrder;
+                }
+                else
+                {
+                    _shoppingCart.Contents[order.Item.Name] = order;
+                }
+
+
+                
 
                 Session.Add("Cart", _shoppingCart);
             }

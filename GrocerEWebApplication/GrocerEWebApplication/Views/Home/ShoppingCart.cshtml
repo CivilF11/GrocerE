@@ -30,12 +30,12 @@
         <div>
 
             <ol class="shoppingCart">
-                @foreach (Order order in Model.Contents)
+                @foreach (KeyValuePair<String, Order> order in Model.Contents)
                 {
                     <li class="shoppingCart">
-                        <h4>@order.Item.ID &nbsp&nbsp&nbsp&nbsp @order.Item.Name</h4>
-                        <p>Price: @order.Item.Price.ToString("c") x @order.Amount</p>
-                        <p>Item Subtotal: @order.SubTotal.ToString("c") + @order.SubTotalTax.ToString("c") taxable</p>
+                        <h4>@order.Value.Item.ID &nbsp&nbsp&nbsp&nbsp @order.Value.Item.Name</h4>
+                        <p>Price: @order.Value.Item.Price.ToString("c") x @order.Value.Amount</p>
+                        <p>Item Subtotal: @order.Value.SubTotal.ToString("c") + @order.Value.SubTotalTax.ToString("c") taxable</p>
                     </li>
                 }
             </ol>

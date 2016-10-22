@@ -10,11 +10,11 @@ namespace GrocerEWebApplication.Models
 
 
 
-        private List<Order> _contents;
+        private Dictionary<String, Order> _contents;
 
 
 
-        public List<Order> Contents
+        public Dictionary<String, Order> Contents
         {
             get
             {
@@ -34,7 +34,7 @@ namespace GrocerEWebApplication.Models
 
         public Cart()
         {
-            Contents = new List<Order>();
+            Contents = new Dictionary<String, Order>();
         }
 
 
@@ -43,9 +43,9 @@ namespace GrocerEWebApplication.Models
         {
             double total = 0;
 
-            foreach (Order order in Contents)
+            foreach (KeyValuePair<String, Order> order in Contents)
             {
-                total += order.SubTotal;
+                total += order.Value.SubTotal;
             }
 
             return total;
@@ -56,9 +56,9 @@ namespace GrocerEWebApplication.Models
         {
             double total = 0;
 
-            foreach (Order order in Contents)
+            foreach (KeyValuePair<String, Order> order in Contents)
             {
-                total += order.SubTotalTax;
+                total += order.Value.SubTotalTax;
             }
 
             return total;
