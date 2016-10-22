@@ -44,7 +44,9 @@ namespace GrocerEWebApplication.Controllers
         }
         public ActionResult ShoppingCart()
         {
-            return View(_shoppingCart.Contents);
+            _shoppingCart = (Cart) Session.Contents["Cart"];
+
+            return View(_shoppingCart);
         }
 
 
@@ -57,9 +59,18 @@ namespace GrocerEWebApplication.Controllers
 
             if (item != null)
             {
+                _shoppingCart = (Cart) Session.Contents["Cart"];
+
+                if (_shoppingCart == null)
+                {
+                    _shoppingCart = new Cart();
+                }
+
                 Order order = new Order(item, 1);
 
                 _shoppingCart.Contents.Add(order);
+
+                Session.Add("Cart", _shoppingCart);
             }
 
             return View("Index", _inventory.Inventory);

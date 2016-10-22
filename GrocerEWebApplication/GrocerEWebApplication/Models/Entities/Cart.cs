@@ -36,6 +36,40 @@ namespace GrocerEWebApplication.Models
         {
             Contents = new List<Order>();
         }
-        
+
+
+
+        public double GetItemSubTotal()
+        {
+            double total = 0;
+
+            foreach (Order order in Contents)
+            {
+                total += order.SubTotal;
+            }
+
+            return total;
+        }
+
+
+        public double GetItemTaxTotal()
+        {
+            double total = 0;
+
+            foreach (Order order in Contents)
+            {
+                total += order.SubTotalTax;
+            }
+
+            return total;
+        }
+
+
+
+        public double GetFinalTotal()
+        {
+            return (GetItemSubTotal() + GetItemTaxTotal());
+        }
+
     }
 }
