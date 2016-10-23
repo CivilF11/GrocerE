@@ -13,12 +13,27 @@
 <body>
     <div>
         <ul>
-            <li>@Html.ActionLink("Index", "Index")</li>
+            <li>@Html.ActionLink("Home", "Index")</li>
             <li>@Html.ActionLink("About", "About")</li>
             <li>@Html.ActionLink("Inventory", "Inventory")</li>
             <li>@Html.ActionLink("Login", "Login")</li>
             <li>@Html.ActionLink("Shopping Cart", "ShoppingCart")</li>
         </ul>
+        <form>
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                <br />
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <br />
+                <button type="submit">Login</button>
+                <input type="checkbox" checked="checked"> Remember me
+            </div>
+        </form>
+
+        Not functional yet!
+
     </div>
 </body>
 </html>

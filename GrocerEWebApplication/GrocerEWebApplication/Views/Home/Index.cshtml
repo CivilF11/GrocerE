@@ -16,12 +16,11 @@
 <body>
     <div>
         <ul>
-            <li><a href="~/Views/Home/Index.cshtml">Home</a></li>
-            <li><a href="~/Views/Home/About.cshtml">About</a></li>
-            <li><a href="~/Views/Home/Inventory.cshtml">Inventory</a></li>
-            <li><a href="~/Views/Home/Login.cshtml">Login</a></li>
-            <li><a href="~/Views/Home/ShoppingCart.cshtml">Shopping Cart</a></li>
-            <li>@Html.ActionLink("Cart", "ShoppingCart")</li>
+            <li>@Html.ActionLink("Home", "Index")</li>
+            <li>@Html.ActionLink("About", "About")</li>
+            <li>@Html.ActionLink("Inventory", "Inventory")</li>
+            <li>@Html.ActionLink("Login", "Login")</li>
+            <li>@Html.ActionLink("Shopping Cart", "ShoppingCart")</li>
         </ul>
     </div>
     <div>
@@ -41,7 +40,7 @@
                             <p>In Stock: @stockItem.Quantity</p>
 
                             <input type="submit" value="Add To Cart" name="@stockItem.Item.ID.ToString()" id="@stockItem.Item.ID.ToString()" />
-                        
+                            
                     </li>
     }
 }
